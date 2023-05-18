@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.body-left {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  background-image: url('../images/drone2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .body-left {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .body-left {
+    display: flex;
+  }
+}
+
+.body-right {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  max-height: 100vh; /* add this line */
+}
+
+
+.frame-body-right {
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame-log {
+  width: 100%;
+  height: 15%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.frame-log2 {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  display: flex;
+  margin-top: 5%;
+  flex-direction: column;
+}
+.frame-log-title {
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-family: Poppins;
+  font-weight: Bold;
+  font-size: 3vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-log-text {
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 1.1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-title {
+  width: 100%;
+  color: rgba(23, 45, 57, 1);
+  position: relative;
+  font-family: Poppins;
+  font-weight: Medium;
+  font-size: 1vw;
+  text-align: left;
+  display: flex;
+}
+
+input[type="text"] {
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  margin: 2% 0;
+  display: flex;
+  width: 100%;
+  padding: 1.5% 2%;
+}
+
+input::placeholder {
+  font-size: 1vw;
+  text-align: left;
+  color: #bcbcbc;
+}
+
+.form-title.required:after {
+  content: " *";
+  color: red;
+}
+
+.button {
+  width: 100%;
+  height: 32px;
+  background: rgba(41, 109, 205, 1);
+  border: none;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 2%;
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 1vw;
+}
+input[type="password"] {
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  margin: 2% 0;
+  display: flex;
+  width: 100%;
+  padding: 1.5% 2%;
+}
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.confirm-password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* Password */
+.password-toggle:hover {
+  text-decoration: underline;
+}
+.password-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: #bcbcbc;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.password-toggle.show svg {
+  fill: #ccc;
+}
+.confirm-password-toggle:hover {
+  text-decoration: underline;
+}
+.confirm-password-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: #bcbcbc;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.confirm-password-toggle.show svg {
+  fill: #ccc;
+}
+
+
+/* Role dropdown */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-button {
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  margin: 2% 0;
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 0.9vw;
+  color: #bcbcbc;
+}
+
+.dropdown-menu {
+  position: relative;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ccc;
+}
+
+.dropdown-menu.show {
+  display: block;
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../assets/css/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/breadcrumb.css" />
+    <link rel="stylesheet" href="../assets/css/table.css" />
+    <link rel="stylesheet" href="../assets/css/chat.css" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-frame">
+        <a href="">
+          <div class="frame-logo">
+            <div class="logo"></div>
+          </div>
+        </a>
+        <div class="sidebox" id="navigation" role="navigation">
+          <div class="side-row">
+            <div class="dashboard">
+              <a href="../admin/dashboard.html" class="text">Dashboard</a>
+            </div>
+          </div>
+
+          <div class="side-row">
+            <div class="transponder">
+              <span class="text">Drone</span>
+            </div>
+            <div class="subtext">
+              <a href="../admin/drone_list.html" class="subtext2">Drone List</a>
+            </div>
+            <div class="subtext">
+              <a href="../admin/pilot_list.html" class="subtext2">Pilot List</a>
+            </div>
+            <div class="subtext">
+              <a href="../admin/flight_list.html" class="subtext2">Flight List</a>
+            </div>
+            <div class="subtext">
+              <a href="" class="subtext2">Post Flight Report</a>
+            </div>
+            <div class="subtext">
+              <a href="" class="subtext2">History</a>
+            </div>
+          </div>
+
+          <div class="side-row">
+            <div class="user">
+              <span class="text">Users</span>
+            </div>
+            <div class="subtext">
+              <a href="../admin/admin_list.html" class="subtext2">Admin List</a>
+            </div>
+            <div class="subtext">
+              <a href="../admin/user_list.html" class="subtext2">User List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-frame">
+          <div class="title-frame"><span class="title">User List</span></div>
+          <div class="icon-frame">
+            <div onclick="notifFunction()" class="notifbtn bell"></div>
+            <div class="profile dropbtn" onclick="myFunction()">
+              <div class="dropdown">
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="dropdown-frame">
+                    <div class="dropdown-photo">
+                      <svg
+                        style="color: rgb(108, 114, 167)"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-person-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="#6c72a7"></path>
+                        <path
+                          fill-rule="evenodd"
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          fill="#6c72a7"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="dropdown-title">Airnav Surabaya</div>
+                    <div class="dropdown-mail">airnav@gmail.com</div>
+                    <div class="dropdown-list">
+                      <span class="dropdown-text">My Profile</span>
+                      <div class="dropdown-profile">
+                        <svg
+                          style="color: rgb(108, 114, 167)"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-person"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                            fill="#6c72a7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="dropdown-list">
+                      <span class="dropdown-text">Sign Out</span>
+                      <div class="dropdown-logout">
+                        <svg
+                          style="color: rgb(108, 114, 167)"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 512 512"
+                        >
+                          <polygon
+                            fill="var(--ci-primary-color, currentColor)"
+                            points="77.155 272.034 351.75 272.034 351.75 272.033 351.75 240.034 351.75 240.033 77.155 240.033 152.208 164.98 152.208 164.98 152.208 164.979 129.58 142.353 15.899 256.033 15.9 256.034 15.899 256.034 129.58 369.715 152.208 347.088 152.208 347.087 152.208 347.087 77.155 272.034"
+                            class="ci-primary"
+                          ></polygon>
+                          <polygon
+                            fill="var(--ci-primary-color, currentColor)"
+                            points="160 16 160 48 464 48 464 464 160 464 160 496 496 496 496 16 160 16"
+                            class="ci-primary"
+                          ></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-item">
+          <div class="breadcrumb-icon"></div>
+          <a style="text-decoration: none" href="../admin/dashboard.html">
+            <span class="breadcrumb-link">Dashboard</span>
+          </a>
+          <span class="breadcrumb-link">/</span>
+          <span class="breadcrumb-text">User List</span>
+        </div>
+      </div>
+
+      <!-- Heading Title -->
+      <div class="heading">
+        <div class="frame-heading">
+          <div class="frame-heading-left"><span class="heading-text">User list</span></div>
+        </div>
+      </div>
+
+      <!-- Helper -->
+      <div class="helper">
+        <span class="frame-helper">
+          <span class="frame-helper-left">Showing 1 to 2 of 2 entries</span>
+          <span class="frame-helper-right">
+            <div class="toggle-wrapper">
+              <button id="list-toogle-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="bi bi-list-ul"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                  />
+                </svg>
+                <div class="button-text" style="color: black">Entries</div>
+              </button>
+              <div class="dropdown-list">
+                <label>10 Entries</label>
+                <label>20 Entries</label>
+                <label>30 Entries</label>
+                <label>40 Entries</label>
+                <label>50 Entries</label>
+              </div>
+            </div>
+            <div class="toggle-wrapper">
+              <button id="column-toggle-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 512 512">
+                  <path
+                    fill="var(--ci-primary-color, currentColor)"
+                    d="M472,48H40A24.028,24.028,0,0,0,16,72V448a24.028,24.028,0,0,0,24,24H472a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,472,48Zm-8,32v64H48V80ZM48,176H240V440H48ZM272,440V176H464V440Z"
+                    class="ci-primary"
+                  />
+                </svg>
+                <div class="button-text" style="color: black">Column</div>
+              </button>
+              <div class="dropdown-columns">
+                <label>
+                  <input type="checkbox" name="column1" value="column1" />
+                  Flight Number
+                </label>
+                <label>
+                  <input type="checkbox" name="column2" value="column2" />
+                  Imei
+                </label>
+                <label>
+                  <input type="checkbox" name="column3" value="column3" />
+                  Transponder Name
+                </label>
+                <label>
+                  <input type="checkbox" name="column4" value="column4" />
+                  Origin
+                </label>
+                <label>
+                  <input type="checkbox" name="column5" value="column5" />
+                  Destination
+                </label>
+                <label>
+                  <input type="checkbox" name="column6" value="column6" />
+                  Status
+                </label>
+              </div>
+            </div>
+
+            <div class="toggle-wrapper">
+              <button id="export-csv">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                  <g>
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      fill-rule="nonzero"
+                      d="M13 12h3l-4 4-4-4h3V8h2v4zm2-8H5v16h14V8h-4V4zM3 2.992C3 2.444 3.447 2 3.999 2H16l5 5v13.993A1 1 0 0 1 20.007 22H3.993A1 1 0 0 1 3 21.008V2.992z"
+                    />
+                  </g>
+                </svg>
+                <div class="button-text" style="color: black">Export</div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+
+      <!-- Right Search Box -->
+      <div class="search">
+        <div class="frame-search">
+          <input type="text" id="input-text" name="input-text" placeholder="Search..." class="search-box" />
+          <!-- <span class="v140_6909">Search</span> -->
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="container">
+        <div class="table">
+          <div class="table-header">
+            <div class="frame-table-header">
+              <span class="table-title">No</span>
+              <span class="table-title" id="column1">Full Name</span>
+              <span class="table-title" id="column2">Email</span>
+              <span class="table-title" id="column3">Phone</span>
+              <span class="table-title" id="column4">KTP</span>
+              <span class="table-title" id="column5">Company Deed</span>
+              <span class="table-title" id="column6">Status</span>
+              <span class="table-title" id="column7">Action</span>
+            </div>
+          </div>
+
+          <div class="table-body"></div>
+        </div>
+
+        <div class="pagination">
+          <span class="arrow-button">
+            <svg
+              style="color: rgb(41, 109, 205)"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-arrow-left-square-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"
+                fill="#296dcd"
+              ></path>
+            </svg>
+          </span>
+          <span class="arrow-text">1 of 1</span>
+          <span class="arrow-button">
+            <svg
+              style="color: rgb(113, 167, 242)"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-arrow-right-square-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"
+                fill="#71a7f2"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="close-btn">
+      <div class="close-icon">&times;</div>
+    </div>
+    <div class="hamburger-btn hidden">
+      <div class="hamburger-icon">&#9776;</div>
+    </div>
+
+    <script src="../assets/js/hamburger.js"></script>
+    <script src="../assets/js/profile_dropdown.js"></script>
+    <script src="../assets/js/table_user.js"></script>
+    <script src="../assets/js/helper.js"></script>
+    <script src="../assets/js/download.js"></script>
+    <script src="../assets/js/chat.js"></script>
+  </body>
+</html>

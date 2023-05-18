@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <link rel="stylesheet" href="../assets/css/sidebar.css" />
+      <link rel="stylesheet" href="../assets/css/navbar.css" />
+      <link rel="stylesheet" href="../assets/css/breadcrumb.css" />
+      <link rel="stylesheet" href="../assets/css/chat.css" />
+      <link rel="stylesheet" href="../assets/css/tab.css" />
+    <title>Flight Detail</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-frame">
+        <a href="">
+          <div class="frame-logo">
+            <div class="logo"></div>
+          </div>
+        </a>
+        <div class="sidebox" id="navigation" role="navigation">
+          <div class="side-row">
+            <div class="dashboard">
+              <a href="../user/dashboard.html" class="text">Dashboard</a>
+            </div>
+          </div>
+
+          <div class="side-row">
+            <div class="transponder">
+              <span class="text">Drone</span>
+            </div>
+            <div class="subtext">
+              <a href="" class="subtext2">Permission List</a>
+            </div>
+            <div class="subtext">
+              <a href="../user/drone_list.html" class="subtext2">Drone List</a>
+            </div>
+            <div class="subtext">
+              <a href="../user/pilot_list.html" class="subtext2">Pilot List</a>
+            </div>
+            <div class="subtext">
+              <a href="../user/" class="subtext2">Flight List</a>
+            </div>
+            <div class="subtext">
+              <a href="" class="subtext2">Post Flight Report</a>
+            </div>
+            <div class="subtext">
+              <a href="" class="subtext2">History</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-frame">
+          <div class="title-frame"><span class="title">Flight Detail</span></div>
+          <div class="icon-frame">
+            <div onclick="notifFunction()" class="notifbtn bell"></div>
+            <div class="profile dropbtn" onclick="myFunction()">
+              <div class="dropdown">
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="dropdown-frame">
+                    <div class="dropdown-photo">
+                      <svg
+                        style="color: rgb(108, 114, 167)"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="bi bi-person-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="#6c72a7"></path>
+                        <path
+                          fill-rule="evenodd"
+                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                          fill="#6c72a7"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="dropdown-title">Airnav Surabaya</div>
+                    <div class="dropdown-mail">airnav@gmail.com</div>
+                    <div class="dropdown-list">
+                      <span class="dropdown-text">My Profile</span>
+                      <div class="dropdown-profile">
+                        <svg
+                          style="color: rgb(108, 114, 167)"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-person"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                            fill="#6c72a7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="dropdown-list">
+                      <span class="dropdown-text">Sign Out</span>
+                      <div class="dropdown-logout">
+                        <svg
+                          style="color: rgb(108, 114, 167)"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 512 512"
+                        >
+                          <polygon
+                            fill="var(--ci-primary-color, currentColor)"
+                            points="77.155 272.034 351.75 272.034 351.75 272.033 351.75 240.034 351.75 240.033 77.155 240.033 152.208 164.98 152.208 164.98 152.208 164.979 129.58 142.353 15.899 256.033 15.9 256.034 15.899 256.034 129.58 369.715 152.208 347.088 152.208 347.087 152.208 347.087 77.155 272.034"
+                            class="ci-primary"
+                          ></polygon>
+                          <polygon
+                            fill="var(--ci-primary-color, currentColor)"
+                            points="160 16 160 48 464 48 464 464 160 464 160 496 496 496 496 16 160 16"
+                            class="ci-primary"
+                          ></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-item">
+          <div class="breadcrumb-icon"></div>
+          <a style="text-decoration: none" href="../user/dashboard.html">
+            <span class="breadcrumb-link">Dashboard</span>
+          </a>
+          <span class="breadcrumb-link">/</span>
+          <a style="text-decoration: none" href="../user/flight_list.html">
+            <span class="breadcrumb-link">Flight List</span>
+          </a>
+          <span class="breadcrumb-link">/</span>
+          <span class="breadcrumb-text">Flight Detail</span>
+        </div>
+      </div>
+    
+      <!-- Heading Title -->
+      <div class="heading">
+        <div class="frame-heading">
+          <div class="frame-heading-left">
+            <span class="heading-text">Flight FN-0000001</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Helper -->
+      <div class="helper">
+        <span class="frame-helper">
+          <span class="frame-helper-left">Detail of flight</span>
+        </span>
+      </div>
+    
+      <div class="tab-container">
+        <div class="tab-header-container">
+          <button class="tab-button active" onclick="openTab(event, 'tab1')">
+            Preparation &amp; Take Off
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'tab2')">
+            Landing
+          </button>
+        </div>
+        <div class="tab-content-container">
+          <div id="tab1" class="tab-content">
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input type="checkbox" id="checkbox-1" onchange="showTime('checkbox-1'); enableCheckboxes('checkbox-1', 'checkbox-15')"/>
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-1">-</b>
+                <label for="checkbox-1">Set Up Airframe PUTA</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-2"
+                  onchange="showTime('checkbox-2'); enableCheckboxes('checkbox-2', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-2">-</b>
+                <label for="checkbox-2">Set Up Telemetry</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-3"
+                  onchange="showTime('checkbox-3'); enableCheckboxes('checkbox-3', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-3">-</b>
+                <label for="checkbox-3">Cek arah dan kecepatan angin</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-4"
+                  onchange="showTime('checkbox-4'); enableCheckboxes('checkbox-4', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-4">-</b>
+                <label for="checkbox-4">Setting GCS(Ground Control System)</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-5"
+                  onchange="showTime('checkbox-5'); enableCheckboxes('checkbox-5', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div style="display: flex; position: relative; flex-direction: column">
+                <b id="time-checkbox-5">-</b>
+                <label
+                  for="checkbox-5">Pemasangan baterai; Cek telemetry; Aktivasi GCS; Cek remote</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-6"
+                  onchange="showTime('checkbox-6'); enableCheckboxes('checkbox-6', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-6">-</b>
+                <label for="checkbox-6">Loading muatan (cek / pasang muatan)</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-7"
+                  onchange="showTime('checkbox-7'); enableCheckboxes('checkbox-7', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-7">-</b>
+                <label for="checkbox-7">Kalibrasi dan cek Center of Gravity</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-8"
+                  onchange="showTime('checkbox-8'); enableCheckboxes('checkbox-8', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-8">-</b>
+                <label for="checkbox-8">Cek aktuator (control surface dan motor PUTA)</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-9"
+                  onchange="showTime('checkbox-9'); enableCheckboxes('checkbox-9', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-9">-</b>
+                <label for="checkbox-9">Test hover</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-10"
+                  onchange="showTime('checkbox-10'); enableCheckboxes('checkbox-10', 'checkbox-15')"
+                  disabled
+                />
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-10">-</b>
+                <label for="checkbox-10">Take Off</label>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div id="tab2" class="tab-content" style="display: none">
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-11"
+                  onchange="showTime('checkbox-11'); enableCheckboxes('checkbox-11', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-11">-</b>
+                <label for="checkbox-11">Misi Tercapai</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-12"
+                  onchange="showTime('checkbox-12'); enableCheckboxes('checkbox-12', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-12">-</b>
+                <label for="checkbox-12">Menonaktifkan sistem</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-13"
+                  onchange="showTime('checkbox-13'); enableCheckboxes('checkbox-13', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-13">-</b>
+                <label for="checkbox-13">Cek baterai</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-14"
+                  onchange="showTime('checkbox-14'); enableCheckboxes('checkbox-14', 'checkbox-15')"
+                  disabled
+                />
+                <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: column;
+                  width: 5%;
+                  align-items: center;
+                  top: 10%;
+                "
+              >
+                <svg
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="30"
+                  viewBox="0 0 16 30"
+                >
+                <circle class="svg-circle" cx="8" cy="2" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="10" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="18" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="26" r="1.5" fill="#C3D4EB"/>
+                <circle class="svg-circle" cx="8" cy="34" r="1.5" fill="#C3D4EB"/>
+                </svg>
+              </div>
+                </div>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-14">-</b>
+                <label for="checkbox-14">Cek suhu motor</label>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              style="
+                display: flex;
+                position: relative;
+                margin-bottom: 2%;
+                flex-direction: row;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  position: relative;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    align-items: center;
+                  "
+                >
+                <input
+                  type="checkbox"
+                  id="checkbox-15"
+                  onchange="showTime('checkbox-15'); enableCheckboxes('checkbox-1', 'checkbox-15')"
+                  disabled
+                />
+                </div> 
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  flex-direction: row;
+                  width: 95%;
+                  margin-left: 2%;
+                "
+              >
+                <div
+                  style="display: flex; position: relative; flex-direction: column"
+                >
+                <b id="time-checkbox-15">-</b>
+                <label for="checkbox-15">Bongkar muatan</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="close-btn">
+      <div class="close-icon">&times;</div>
+    </div>
+    <div class="hamburger-btn hidden">
+      <div class="hamburger-icon">&#9776;</div>
+    </div>
+    
+    <script src="../assets/js/hamburger.js"></script>
+    <script src="../assets/js/profile_dropdown.js"></script>
+    <script src="../assets/js/chat.js"></script>
+    <script src="../assets/js/tab.js"></script>
+    <script src="../assets/js/checkbox_date.js"></script>
+  </body>
+</html>

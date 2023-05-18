@@ -1,0 +1,195 @@
+.regis {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-regis {
+  width: 92%;
+  height: 260px;
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-regis2 {
+  width: 95%;
+  height: 90%;
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.regis-title {
+  width: 100%;
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+.frame-regis-title {
+  width: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  font-family: Poppins;
+  font-weight: Bold;
+  font-size: 1.5vw;
+  text-align: left;
+}
+.regis-form {
+  width: 100%;
+  height: 80%;
+  margin-top: 3%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.regis-form2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.regis-form-left {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+.regis-form-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-box {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-title {
+  width: 100%;
+  color: rgba(23, 45, 57, 1);
+  position: relative;
+  font-family: Poppins;
+  font-weight: Medium;
+  font-size: 1vw;
+  text-align: left;
+  display: flex;
+}
+
+input[type="text"] {
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  margin: 2% 0;
+  display: flex;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 1vw;
+  text-align: left;
+  color: #bcbcbc;
+}
+
+input[type="file"] {
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  margin: 2% 0;
+  display: flex;
+  width: 100%;
+  padding: 1.5% 2%;
+}
+input[type="date"] {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1vw;
+  padding: 1% 3%;
+  display: flex;
+  margin: 2% 0;
+}
+input[type="file"]::file-selector-button {
+  margin-right: 10px;
+  border: none;
+  background: url("../images/cloud_upload.svg") no-repeat;
+  background-size: contain;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 10px;
+  color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  /* transition: background .2s ease-in-out; */
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: url("../images/cloud_upload.svg");
+  width: 2em;
+  height: 2em;
+}
+input[type="file"]:valid::file-selector-button {
+  background: url("../images/insert_drive_file.svg") no-repeat;
+  background-size: contain;
+  width: 1.5em;
+  height: 1.5em;
+}
+.form-title.required:after {
+  content: " *";
+  color: red;
+}
+.regis-button {
+  width: 15%;
+  height: 20%;
+  background: rgba(41, 109, 205, 1);
+  position: relative;
+  display: flex;
+  border-radius: 10px ;
+  margin-top: 2%;
+  justify-content: center;
+  align-items: center;
+}
+.button-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.button-text {
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 1vw;
+  text-align: center;
+}

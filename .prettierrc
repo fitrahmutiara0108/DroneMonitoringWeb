@@ -1,0 +1,16 @@
+{
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 2,
+        "useTabs": false,
+        "wrapAttributes": "auto",
+        "htmlWhitespaceSensitivity": "ignore",
+        "vueIndentScriptAndStyle": false,
+        "endOfLine": "lf"
+      }
+    }
+  ]
+}

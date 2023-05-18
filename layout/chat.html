@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/chat.css" />
+  </head>
+  <body>
+    <!-- Pop Up Chat -->
+    <div id="chat-popup" style="display: none">
+      <div id="chat-header">
+        <div id="chat-title">Chat with us</div>
+        <div id="exit-btn">X</div>
+      </div>
+      <div id="chat-content">
+        <div class="chat-slide active" data-id="1">
+          <div class="chat-message">
+            <div class="bot-message">Welcome to our live chat, how can we assist you today?</div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="faq-btn" data-slide="2">What is your company's return policy?</button>
+            </div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="faq-btn" data-slide="3">What payment methods do you accept?</button>
+            </div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="faq-btn" data-slide="4">Do you offer free shipping?</button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-slide" data-id="2">
+          <div class="chat-message">
+            <div class="bot-message">
+              Our return policy is 30 days from the date of purchase. Please refer to our website for more details.
+            </div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="faq-btn" data-slide="5">Can I return an item if I change my mind?</button>
+            </div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="back-btn">Back</button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-slide" data-id="3">
+          <div class="chat-message">
+            <div class="bot-message">We accept all major credit cards and PayPal.</div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="back-btn">Back</button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-slide" data-id="4">
+          <div class="chat-message">
+            <div class="bot-message">Yes, we offer free shipping on all orders over $50.</div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="back-btn">Back</button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-slide" data-id="5">
+          <div class="chat-message">
+            <div class="bot-message">
+              Yes, you can return an item within 30 days of purchase as long as it is in its original condition and
+              packaging.
+            </div>
+          </div>
+          <div class="chat-message">
+            <div class="user-message">
+              <button class="back-btn">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="chat-footer">
+        <input type="text" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+    <div id="chat-icon"><span class="chat-text">Chat with us</span></div>
+
+    <script src="../js/chat.js"></script>
+  </body>
+</html>
