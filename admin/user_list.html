@@ -20,7 +20,7 @@
         <div class="sidebox" id="navigation" role="navigation">
           <div class="side-row">
             <div class="dashboard">
-              <a href="../admin/dashboard.html" class="text">Dashboard</a>
+              <a href="dashboard.html" class="text">Dashboard</a>
             </div>
           </div>
 
@@ -29,13 +29,16 @@
               <span class="text">Drone</span>
             </div>
             <div class="subtext">
-              <a href="../admin/drone_list.html" class="subtext2">Drone List</a>
+              <a href="drone_list.html" class="subtext2">Drone List</a>
             </div>
             <div class="subtext">
-              <a href="../admin/pilot_list.html" class="subtext2">Pilot List</a>
+              <a href="pilot_list.html" class="subtext2">Pilot List</a>
             </div>
             <div class="subtext">
-              <a href="../admin/flight_list.html" class="subtext2">Flight List</a>
+              <a href="flight_list.html" class="subtext2">Flight List</a>
+            </div>
+            <div class="subtext">
+              <a href="license_list.html" class="subtext2">License List</a>
             </div>
             <div class="subtext">
               <a href="" class="subtext2">Post Flight Report</a>
@@ -50,10 +53,10 @@
               <span class="text">Users</span>
             </div>
             <div class="subtext">
-              <a href="../admin/admin_list.html" class="subtext2">Admin List</a>
+              <a href="admin_list.html" class="subtext2">Admin List</a>
             </div>
             <div class="subtext">
-              <a href="../admin/user_list.html" class="subtext2">User List</a>
+              <a href="user_list.html" class="subtext2">User List</a>
             </div>
           </div>
         </div>
@@ -65,7 +68,39 @@
         <div class="navbar-frame">
           <div class="title-frame"><span class="title">User List</span></div>
           <div class="icon-frame">
-            <div onclick="notifFunction()" class="notifbtn bell"></div>
+            <div class="bell notifbtn" onclick="notifFunction()">
+              <div class="dropdown">
+                <div id="notifDropdown" class="notif-dropdown-content" style="width: 500px;">
+                  <div class="notif-frame">
+                    <div class="dropdown-notif" style="background-color: aliceblue">
+                      <div class="dropdown-notif2">
+                        <span class="dropdown-avatar" style="background-color: #E6FFE3; border: 1px solid #1DBD65;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1DBD65" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16"> <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707L6.354 9.854z"/> </svg>
+                        </span>
+                        <span class="notif-detail">
+                          <span class="notif-text">File Upload</span>
+                          <span class="notif-text2">Beehive drones have just uploaded KML file for Flight0001, validate now </span>
+                        </span>
+                        <span class="notif-date">1 day</span>
+                      </div>
+                    </div>
+                    <div class="dropdown-notif">
+                      <div class="dropdown-notif2">
+                        <span class="dropdown-avatar" style="background-color: #FFD9DC; border: 1px solid #E82D3D;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E82D3D" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16"> <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> </svg>
+                        </span>
+                        <span class="notif-detail">
+                          <span class="notif-text">Drone’s Alert <span style="color: #E82D3D;; margin-left: 2%;">FN-0000001</span></span>
+                          <span class="notif-text2">Approaching fence  100m again in 3 minute</span>
+                        </span>
+                        <span class="notif-date">4 days</span>
+                      </div>
+                    </div>
+                    <div class="view-all">View All</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="profile dropbtn" onclick="myFunction()">
               <div class="dropdown">
                 <div id="myDropdown" class="dropdown-content">
@@ -86,11 +121,10 @@
                         ></path>
                       </svg>
                     </div>
-                    <div class="dropdown-title">Airnav Surabaya</div>
+                    <div class="dropdown-title">AirNav Surabaya</div>
                     <div class="dropdown-mail">airnav@gmail.com</div>
-                    <div class="dropdown-list">
-                      <span class="dropdown-text">My Profile</span>
-                      <div class="dropdown-profile">
+                    <div class="dropdown-mail2">
+                      <span class="dropdown-profile">
                         <svg
                           style="color: rgb(108, 114, 167)"
                           xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +139,11 @@
                             fill="#6c72a7"
                           ></path>
                         </svg>
-                      </div>
+                      </span>
+                      <a href="user_profile.html" class="dropdown-text" style="width: 40%;">My Profile</a>
                     </div>
-                    <div class="dropdown-list">
-                      <span class="dropdown-text">Sign Out</span>
-                      <div class="dropdown-logout">
+                    <div class="dropdown-mail2">
+                      <span class="dropdown-logout">
                         <svg
                           style="color: rgb(108, 114, 167)"
                           xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +162,8 @@
                             class="ci-primary"
                           ></polygon>
                         </svg>
-                      </div>
+                      </span>
+                      <a href="login.html" class="dropdown-text">Sign Out</a>
                     </div>
                   </div>
                 </div>

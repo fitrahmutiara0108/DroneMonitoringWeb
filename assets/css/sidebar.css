@@ -30,17 +30,38 @@
     overflow: auto; /* add a scrollbar to the page if content height exceeds viewport height */
   }
   
-  .close-btn,
+  .close-btn, 
   .hamburger-btn {
     position: absolute;
     z-index: 1;
-    background-color: white;
     width: 2%;
-    margin-top: 2%;
+    height: 4%;
+    margin-top: 1.6%;
+    margin-left: 1%;
+    color: white;
+    display: flex;
+    background-color: #0f4187;
+    justify-content: center;
+    align-items: center;
   }
+
   .close-btn .close-icon,
   .hamburger-btn .hamburger-icon {
-    display: block;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-icon{
+    font-size: 25px;
+  }
+
+  .hamburger-btn:hover,
+  .close-btn:hover {
+    /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+    background-color: #71a7f2;
   }
   .hidden {
     display: none;

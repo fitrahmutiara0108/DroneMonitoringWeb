@@ -64,27 +64,31 @@
 }
 
 /* Dropdown Profile Button */
-.dropbtn {
+.dropbtn,
+.notifbtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.dropdown {
+.dropdown,
+.notif-dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
-  right: 0;
   width: 13.25rem;
+  max-width: 20rem;
   max-height: 15rem; 
   position: absolute;
   background-color: #fff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
   z-index: 1;
-  border-radius: 1rem; 
+  right: -35px;
+  top: 25px;
+  border-radius: 1rem;
   align-items: center;
 }
 
@@ -117,23 +121,31 @@
   margin-bottom: 10%;
 }
 
-.dropdown-list {
+.dropdown-mail2 {
   width: 100%;
   height: 2.375rem;
+  color: rgba(154, 157, 161, 1);
   position: relative;
   border-bottom: 1px solid #bcbcbc;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-text {
   width: 4.5rem;
+  height: 2.375rem;
   color: rgba(0, 0, 0, 1);
   position: relative;
-  top: 0.625rem;
+  top:-25%;
   left: 3.0625rem;
   font-family: Inter;
   font-weight: Regular;
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dropdown-profile,
@@ -141,8 +153,9 @@
   width: 1.5vw;
   height: 1.5vw;
   position: relative;
-  top: -20%;
   left: 10%;
+  top: 30%;
+  display: flex;
 }
 
 .dropdown-photo {
@@ -166,6 +179,117 @@
 
 .dropdown-content a:hover {
   background-color: #ddd;
+}
+
+/* Notification Dropdown */
+.notif-dropdown-content {
+  display: none;
+  width: 15rem;
+  max-width: 23rem;
+  max-height: 15rem; 
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  right: -35px;
+  top: 25px;
+  border-radius: 1rem;
+  align-items: center;
+}
+.notif-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dropdown-notif {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+.dropdown-notif2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.dropdown-avatar {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.notif-detail {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  position: relative;
+  width: 70%;
+  flex-direction: column;
+}
+.notif-text {
+  width: 100%;
+  height: auto;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  margin-left: 5%;
+  font-family: Poppins;
+  font-weight: Bold;
+  font-size: 1vw;
+  text-align: left;
+  display: flex;
+  margin-bottom: 2%;
+}
+.notif-text2 {
+  width: 90%;
+  height: auto;
+  color: #7F7F7F;
+  position: relative;
+  margin-left: 5%;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 0.9vw;
+  text-align: left;
+  display: flex;
+}
+.notif-date {
+  width: 12%;
+  height: auto;
+  color: #7F7F7F;
+  position: relative;
+  margin-right: 2%;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 0.9vw;
+  text-align: left;
+  display: flex;
+}
+.view-all {
+  width: 100%;
+  height: 45px;
+  background-color: #296DCD;
+  color: white;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
 }
 
 .show {

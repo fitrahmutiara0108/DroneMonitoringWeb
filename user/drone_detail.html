@@ -4,9 +4,9 @@
     <link rel="stylesheet" href="../assets/css/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link rel="stylesheet" href="../assets/css/breadcrumb.css" />
-    <link rel="stylesheet" href="../assets/css/table.css" />
     <link rel="stylesheet" href="../assets/css/chat.css" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <link rel="stylesheet" href="../assets/css/drone_detail.css" />
+    <title>Detail Drone</title>
   </head>
 
   <body>
@@ -54,7 +54,7 @@
     <div class="page">
       <div class="navbar">
         <div class="navbar-frame">
-          <div class="title-frame"><span class="title">Drone List</span></div>
+          <div class="title-frame"><span class="title">Flight Detail</span></div>
           <div class="icon-frame">
             <div class="bell notifbtn" onclick="notifFunction()">
               <div class="dropdown">
@@ -164,39 +164,20 @@
       <!-- Breadcrumb -->
       <div class="breadcrumb">
         <div class="breadcrumb-item">
-          <div class="breadcrumb-icon">
-          </div>
-          <a style="text-decoration: none" href="../user/dashboard.html">
+          <div class="breadcrumb-icon"></div>
+          <a style="text-decoration: none" href="../admin/dashboard.html">
             <span class="breadcrumb-link">Dashboard</span>
           </a>
           <span class="breadcrumb-link">/</span>
-          <span class="breadcrumb-text">Drone List</span>
+          <span class="breadcrumb-text">Drone Detail</span>
         </div>
       </div>
 
       <!-- Heading Title -->
       <div class="heading">
         <div class="frame-heading">
-          <div class="frame-heading-left"><span class="heading-text">Drone list</span></div>
-          <div class="frame-heading-right">
-            <a href="../user/drone_regis.html" class="add-button" style="text-decoration: none;">
-              <!-- tulisan add flight + icon -->
-              <div class="button-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="white"
-                  class="bi bi-plus"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3H4.5a.5.5 0 0 1 0-1H7V4.5A.5.5 0 0 1 8 4z"
-                  />
-                </svg>
-                <span class="button-text">Register</span>
-              </div>
-            </a>
+          <div class="frame-heading-left">
+            <span class="heading-text">Transponder Rockblock</span>
           </div>
         </div>
       </div>
@@ -204,151 +185,91 @@
       <!-- Helper -->
       <div class="helper">
         <span class="frame-helper">
-          <span class="frame-helper-left">Showing 1 to 2 of 2 entries</span>
-          <span class="frame-helper-right">
-            <div class="toggle-wrapper">
-              <button id="list-toogle-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  class="bi bi-list-ul"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                  />
-                </svg>
-                <div class="button-text" style="color: black">Entries</div>
-              </button>
-              <div class="dropdown-list">
-                <label>10 Entries</label>
-                <label>20 Entries</label>
-                <label>30 Entries</label>
-                <label>40 Entries</label>
-                <label>50 Entries</label>
-              </div>
-            </div>
-            <div class="toggle-wrapper">
-              <button id="column-toggle-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 512 512">
-                  <path
-                    fill="var(--ci-primary-color, currentColor)"
-                    d="M472,48H40A24.028,24.028,0,0,0,16,72V448a24.028,24.028,0,0,0,24,24H472a24.028,24.028,0,0,0,24-24V72A24.028,24.028,0,0,0,472,48Zm-8,32v64H48V80ZM48,176H240V440H48ZM272,440V176H464V440Z"
-                    class="ci-primary"
-                  />
-                </svg>
-                <div class="button-text" style="color: black">Column</div>
-              </button>
-              <div class="dropdown-columns">
-                <label>
-                  <input type="checkbox" name="column1" value="column1" />
-                  Flight Number
-                </label>
-                <label>
-                  <input type="checkbox" name="column2" value="column2" />
-                  Imei
-                </label>
-                <label>
-                  <input type="checkbox" name="column3" value="column3" />
-                  Transponder Name
-                </label>
-                <label>
-                  <input type="checkbox" name="column4" value="column4" />
-                  Origin
-                </label>
-                <label>
-                  <input type="checkbox" name="column5" value="column5" />
-                  Destination
-                </label>
-                <label>
-                  <input type="checkbox" name="column6" value="column6" />
-                  Status
-                </label>
-              </div>
-            </div>
-
-            <div class="toggle-wrapper">
-              <button id="export-csv">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
-                  <g>
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path
-                      fill-rule="nonzero"
-                      d="M13 12h3l-4 4-4-4h3V8h2v4zm2-8H5v16h14V8h-4V4zM3 2.992C3 2.444 3.447 2 3.999 2H16l5 5v13.993A1 1 0 0 1 20.007 22H3.993A1 1 0 0 1 3 21.008V2.992z"
-                    />
-                  </g>
-                </svg>
-                <div class="button-text" style="color: black">Export</div>
-              </button>
-            </div>
-          </span>
+          <span class="frame-helper-left">Detail of drone here</span>
         </span>
       </div>
 
-      <!-- Right Search Box -->
-      <div class="search">
-        <div class="frame-search">
-          <input type="text" id="input-text" name="input-text" placeholder="Search..." class="search-box" />
-          <!-- <span class="v140_6909">Search</span> -->
-        </div>
-      </div>
-
-      <!-- Table -->
-      <div class="container">
-        <div class="table">
-          <div class="table-header">
-            <div class="frame-table-header">
-              <span class="table-title">No</span>
-              <span class="table-title" id="column1">Transponder Imei</span>
-              <span class="table-title" id="column2">Transponder Name</span>
-              <span class="table-title" id="column3">Drone Name</span>
-              <span class="table-title" id="column4">Serial Number</span>
-              <span class="table-title" id="column5">Status</span>
-              <span class="table-title" id="column6">Action</span>
+      <!-- Frame Detail Drone  -->
+      <div class="drone">
+        <div class="frame-drone">
+          <div class="frame-image">
+            <div style="display: flex; flex-direction: column; position: relative; width: 100%; height: 100%;">
+              <div class="drone-img"></div>
+              <div class="drone-desc">Essentially, a drone is a flying robot that can be remotely controlled or fly autonomously using software-controlled flight plans in its embedded systems, that work in conjunction with onboard sensors and a global positioning system (GPS). UAVs were most often associated with the military.</div>
             </div>
           </div>
-
-          <div class="table-body"></div>
-        </div>
-
-        <div class="pagination">
-          <span class="arrow-button">
-            <svg
-              style="color: rgb(41, 109, 205)"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-arrow-left-square-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"
-                fill="#296dcd"
-              ></path>
-            </svg>
-          </span>
-          <span class="arrow-text">1 of 1</span>
-          <span class="arrow-button">
-            <svg
-              style="color: rgb(113, 167, 242)"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-arrow-right-square-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"
-                fill="#71a7f2"
-              ></path>
-            </svg>
-          </span>
+          <div class="frame-text">
+            <div style="display: flex; flex-direction: column; position: relative; width: 100%; height: 100%;">
+              <div class="v212_7131">
+                <span class="v212_7132">Drone Specs</span>
+                <span class="v212_7133">09087654321 - 123456789</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Max. take off weight</span>
+                <span class="specs-right">25000 gram</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Weight without payload</span>
+                <span class="specs-right">22500 gram</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Maximum flight range</span>
+                <span class="specs-right">100 Km</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Cruise speed</span>
+                <span class="specs-right">21 meter/second</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Maximum Cruise Height</span>
+                <span class="specs-right">18000 feet</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Maximum Rate of Climb</span>
+                <span class="specs-right">200 fpm</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Volumetric Payload Size</span>
+                <span class="specs-right">270 x 250 x 200 mm</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Operational Payload Weight</span>
+                <span class="specs-right">2000 gram</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Wing material</span>
+                <span class="specs-right">Composite</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Fusulage Material</span>
+                <span class="specs-right">Composite</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Proximity sensors</span>
+                <span class="specs-right">LiDar/SRF</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Precision landing mechanism</span>
+                <span class="specs-right">Camera guided</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">File save system</span>
+                <span class="specs-right">Return to land, buzzer, auxiliarity</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Operation system</span>
+                <span class="specs-right">Otak lebah 2.1</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Control system</span>
+                <span class="specs-right">Remote and autonomous mode</span>
+              </div>
+              <div class="specs">
+                <span class="specs-left">Communication system</span>
+                <span class="specs-right">Telemetry, GSM enabled</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -362,9 +283,6 @@
 
     <script src="../assets/js/hamburger.js"></script>
     <script src="../assets/js/profile_dropdown.js"></script>
-    <script src="../assets/js/table_drone.js"></script>
-    <script src="../assets/js/helper.js"></script>
-    <script src="../assets/js/download.js"></script>
     <script src="../assets/js/chat.js"></script>
   </body>
 </html>

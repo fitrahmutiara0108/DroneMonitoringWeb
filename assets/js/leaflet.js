@@ -2,6 +2,7 @@
     center: [-7.7147, 113.215],
     zoom: 12,
     zoomControl: false,
+    zIndex: 10000,  
   });
 
   L.control.zoom({ position: 'topright' }).addTo(map);

@@ -30,9 +30,6 @@
               <span class="text">Drone</span>
             </div>
             <div class="subtext">
-              <a href="" class="subtext2">License Registration</a>
-            </div>
-            <div class="subtext">
               <a href="drone_list.html" class="subtext2">Drone List</a>
             </div>
             <div class="subtext">
@@ -42,10 +39,25 @@
               <a href="flight_list.html" class="subtext2">Flight List</a>
             </div>
             <div class="subtext">
+              <a href="license_list.html" class="subtext2">License List</a>
+            </div>
+            <div class="subtext">
               <a href="" class="subtext2">Post Flight Report</a>
             </div>
             <div class="subtext">
               <a href="" class="subtext2">History</a>
+            </div>
+          </div>
+
+          <div class="side-row">
+            <div class="user">
+              <span class="text">Users</span>
+            </div>
+            <div class="subtext">
+              <a href="admin_list.html" class="subtext2">Admin List</a>
+            </div>
+            <div class="subtext">
+              <a href="user_list.html" class="subtext2">User List</a>
             </div>
           </div>
         </div>
@@ -55,7 +67,7 @@
     <div class="page">
       <div class="navbar">
         <div class="navbar-frame">
-          <div class="title-frame"><span class="title">Pilot List</span></div>
+          <div class="title-frame"><span class="title">License List</span></div>
           <div class="icon-frame">
             <div class="bell notifbtn" onclick="notifFunction()">
               <div class="dropdown">
@@ -67,8 +79,8 @@
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1DBD65" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16"> <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707L6.354 9.854z"/> </svg>
                         </span>
                         <span class="notif-detail">
-                          <span class="notif-text">File Validated</span>
-                          <span class="notif-text2">Your file has successfully been validated by Airnav Surabaya </span>
+                          <span class="notif-text">File Upload</span>
+                          <span class="notif-text2">Beehive drones have just uploaded KML file for Flight0001, validate now </span>
                         </span>
                         <span class="notif-date">1 day</span>
                       </div>
@@ -110,8 +122,8 @@
                         ></path>
                       </svg>
                     </div>
-                    <div class="dropdown-title">Beehive Drones</div>
-                    <div class="dropdown-mail">beehive@gmail.com</div>
+                    <div class="dropdown-title">AirNav Surabaya</div>
+                    <div class="dropdown-mail">airnav@gmail.com</div>
                     <div class="dropdown-mail2">
                       <span class="dropdown-profile">
                         <svg
@@ -129,7 +141,7 @@
                           ></path>
                         </svg>
                       </span>
-                      <a href="user_profile.html" class="dropdown-text">My Profile</a>
+                      <a href="user_profile.html" class="dropdown-text" style="width: 40%;">My Profile</a>
                     </div>
                     <div class="dropdown-mail2">
                       <span class="dropdown-logout">
@@ -166,38 +178,18 @@
       <div class="breadcrumb">
         <div class="breadcrumb-item">
           <div class="breadcrumb-icon"></div>
-          <a style="text-decoration: none" href="../user/dashboard.html">
+          <a style="text-decoration: none" href="../admin/dashboard.html">
             <span class="breadcrumb-link">Dashboard</span>
           </a>
           <span class="breadcrumb-link">/</span>
-          <span class="breadcrumb-text">Pilot List</span>
+          <span class="breadcrumb-text">License List</span>
         </div>
       </div>
 
       <!-- Heading Title -->
       <div class="heading">
         <div class="frame-heading">
-          <div class="frame-heading-left"><span class="heading-text">Pilot list</span></div>
-          <div class="frame-heading-right">
-            <div class="add-button">
-              <!-- tulisan add flight + icon -->
-              <div class="button-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="white"
-                  class="bi bi-plus"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3H4.5a.5.5 0 0 1 0-1H7V4.5A.5.5 0 0 1 8 4z"
-                  />
-                </svg>
-                <span class="button-text">Add Pilot</span>
-              </div>
-            </div>
-          </div>
+          <div class="frame-heading-left"><span class="heading-text">License list</span></div>
         </div>
       </div>
 
@@ -303,13 +295,12 @@
           <div class="table-header">
             <div class="frame-table-header">
               <span class="table-title">No</span>
-              <span class="table-title" id="column1">Full Name</span>
-              <span class="table-title" id="column2">NIK</span>
-              <span class="table-title" id="column3">Phone</span>
-              <span class="table-title" id="column4">KTP/Passport</span>
-              <span class="table-title" id="column5">Pilot Certificate</span>
-              <span class="table-title" id="column6">Status</span>
-              <span class="table-title" id="column7">Action</span>
+              <span class="table-title" id="column1">License ID</span>
+              <span class="table-title" id="column2">Transponder Imei</span>
+              <span class="table-title" id="column3">Transponder Name</span>
+              <span class="table-title" id="column4">Drone Name</span>
+              <span class="table-title" id="column5">User Name</span>
+              <span class="table-title" id="column6">Uploaded At</span>
             </div>
           </div>
 
@@ -360,132 +351,39 @@
     <div class="hamburger-btn hidden">
       <div class="hamburger-icon">&#9776;</div>
     </div>
-    
     <!-- Pop Up Slide -->
     <div class="popup-container">
-      <!-- slide -->
       <div class="popup-slide">
         <div class="headix-box">
           <div class="headix-frame">
-            <span class="slide-text">Add Pilot</span>
+            <span class="slide-text">Add Drone</span>
           </div>
         </div>
         <div class="subix-box">
           <div class="subix-frame">
             <form style="width: 100%">
               <div class="form-frame">
-                <span class="form-text required">Full Name</span>
+                <span class="form-text required">Transponder Imei</span>
                 <div>
-                  <input type="text-form" id="letter" placeholder="Name" required />
+                  <input type="text-form" id="letter" placeholder="Imei" required />
                 </div>
               </div>
               <div class="form-frame">
-                <span class="form-text required">NIK</span>
+                <span class="form-text required">Transponder Name</span>
                 <div>
-                  <input type="text-form" id="letter" placeholder="NIK" required />
+                  <input type="text-form" id="letter" placeholder="Transponder Name" required />
                 </div>
               </div>
               <div class="form-frame">
-                <span class="form-text required">Phone</span>
+                <span class="form-text required">Serial Number</span>
                 <div>
-                  <input type="text-form" id="letter" placeholder="Phone" required />
+                  <input type="text-form" id="letter" placeholder="Serial Number" required />
                 </div>
               </div>
               <div class="form-frame">
-                <span class="form-text required">Upload KTP/Passport</span>
+                <span class="form-text">Description</span>
                 <div>
-                  <input type="file" id="letter" placeholder="" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Upload SIDOPI-GO Certificate</span>
-                <div>
-                  <input type="file" id="letter" placeholder="" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Certificate Expiration Date</span>
-                <div>
-                  <input type="date" id="letter" placeholder="" required />
-                </div>
-              </div>
-              <div class="form-frame" style="flex-direction: row; display: flex">
-                <button
-                  class="next"
-                  style="
-                    width: 45%;
-                    height: 32px;
-                    background-color: #f5f9ff;
-                    border: 1px solid #296dcd;
-                    color: #296dcd;
-                    margin-left: 0;
-                    display: flex;
-                  "
-                >
-                  Add More
-                </button>
-                <button
-                  class="submit"
-                  style="
-                    width: 45%;
-                    height: 32px;
-                    background-color: #296dcd;
-                    color: #fff;
-                    margin-left: 10%;
-                    display: flex;
-                  "
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="popup-slide">
-        <div class="headix-box">
-          <div class="headix-frame">
-            <span class="slide-text">Add Second Pilot</span>
-          </div>
-        </div>
-        <div class="subix-box">
-          <div class="subix-frame">
-            <form style="width: 100%">
-              <div class="form-frame">
-                <span class="form-text required">Full Name</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Name" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">NIK</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="NIK" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Phone</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Phone" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Upload KTP/Passport</span>
-                <div>
-                  <input type="file" id="letter" placeholder="" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Upload SIDOPI-GO Certificate</span>
-                <div>
-                  <input type="file" id="letter" placeholder="" required />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text required">Certificate Expiration Date</span>
-                <div>
-                  <input type="date" id="letter" placeholder="" required />
+                  <input type="text-desc" id="letter" placeholder="Description" />
                 </div>
               </div>
               <div class="form-frame">
@@ -502,129 +400,10 @@
       </div>
       <!-- end of slide -->
     </div>
-    <!-- End of 3 pop up slides -->
-
-    <!-- Pop up for edit expired pilot -->
-    <div class="popup-container-expired">
-      <div class="popup-slide-expired">
-        <div class="headix-box">
-          <div class="headix-frame">
-            <span class="slide-text">Edit Pilot</span>
-          </div>
-        </div>
-        <div class="subix-box">
-          <div class="subix-frame">
-            <form style="width: 100%">
-              <div class="form-frame">
-                <span class="form-text">Full Name</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Name" disabled />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">NIK</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="NIK" disabled />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">Phone</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Phone" />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">Upload KTP/Passport</span>
-                <div>
-                  <input type="file" id="letter" placeholder="" />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">Upload SIDOPI-GO Certificate</span>
-                <div>
-                  <input type="file" id="letter" placeholder="" />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">Certificate Expiration Date</span>
-                <div>
-                  <input type="date" id="letter" placeholder="" />
-                </div>
-              </div>
-              <div class="form-frame">
-                <button
-                  class="submit"
-                  style="
-                    width: 100%;
-                    height: 32px;
-                    background-color: #296dcd;
-                    color: #fff;
-                    margin-left: 0;
-                    display: flex;
-                  "
-                >
-                  Update
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pop up for edit pilot -->
-    <div class="popup-container-edit">
-      <div class="popup-slide-edit">
-        <div class="headix-box">
-          <div class="headix-frame">
-            <span class="slide-text">Edit Pilot</span>
-          </div>
-        </div>
-        <div class="subix-box">
-          <div class="subix-frame">
-            <form style="width: 100%">
-              <div class="form-frame">
-                <span class="form-text">Full Name</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Name" disabled />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">NIK</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="NIK" disabled />
-                </div>
-              </div>
-              <div class="form-frame">
-                <span class="form-text">Phone</span>
-                <div>
-                  <input type="text-form" id="letter" placeholder="Phone" />
-                </div>
-              </div>
-              <div class="form-frame">
-                <button
-                  class="submit"
-                  style="
-                    width: 100%;
-                    height: 32px;
-                    background-color: #296dcd;
-                    color: #fff;
-                    margin-left: 0;
-                    display: flex;
-                  "
-                >
-                  Update
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="../assets/js/hamburger.js"></script>
     <script src="../assets/js/profile_dropdown.js"></script>
-    <script src="../assets/js/table_pilot_user.js"></script>
+    <script src="../assets/js/table_license.js"></script>
     <script src="../assets/js/helper.js"></script>
     <script src="../assets/js/download.js"></script>
     <script src="../assets/js/popup.js"></script>
